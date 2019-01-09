@@ -7,6 +7,10 @@ body, div, p, h1, h2, h3, h4, h5, h6, ul, li, ol, br, dl, dd, dt, table, thead, 
   padding: 0;
 }
 
+span, img {
+  display: inline-block;
+}
+
 body {
   min-height: 100%;
   font-family: 'sans-serif';
@@ -15,4 +19,15 @@ body {
 
 body > #wrapper {
   padding: 2px 4px;
+}
+
+body > #header {
+  height: 112px;
+  background-image: url(/assets/images/bg2.jpg);
+  display: flex;
+  align-items: center;
+}
+
+body > #header > #header-logo {
+  margin-left: 12px;
 }
