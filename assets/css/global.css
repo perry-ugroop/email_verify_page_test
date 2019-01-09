@@ -1,0 +1,18 @@
+html {
+  height: 100%;
+}
+
+body, div, p, h1, h2, h3, h4, h5, h6, ul, li, ol, br, dl, dd, dt, table, thead, tfoot, tr, td, form, blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100%;
+  font-family: 'sans-serif';
+  font-size: 16px;
+}
+
+body > #wrapper {
+  padding: 2px 4px;
+}
