@@ -5,7 +5,7 @@ const app = express();
 const port = 4000;
 
 app.get('/', (req, res) => {
-  const page = viewUtils.load('index');
+  const page = viewUtils.load('index', 'main');
   res.send(page);
 });
 
