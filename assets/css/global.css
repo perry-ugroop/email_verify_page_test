@@ -24,6 +24,16 @@ body > #wrapper {
   flex: 1 0;
 }
 
+body > #wrapper h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+body > #wrapper p {
+  margin-bottom: 6px;
+}
+
 body > #header {
   height: 112px;
   background-image: url(/assets/images/bg2.jpg);
