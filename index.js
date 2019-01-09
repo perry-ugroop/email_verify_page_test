@@ -1,8 +1,9 @@
 import express from 'express';
+import config from './config';
 import viewUtils from './lib/view-utils';
 
 const app = express();
-const port = 4000;
+const port = config.port;
 
 app.get('/', (req, res) => {
   const page = viewUtils.load('index', 'main');
