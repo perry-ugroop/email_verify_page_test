@@ -1,10 +1,12 @@
 import express from 'express';
+import viewUtils from './lib/view-utils';
 
 const app = express();
 const port = 4000;
 
 app.get('/', (req, res) => {
-  res.send('<!DOCTYPE html><html><body><p>Hello, World!</p></body></html>');
+  const page = viewUtils.load('index');
+  res.send(page);
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}...`));
