@@ -26,5 +26,13 @@ app.get('/confirm/success', (req, res) => {
   res.send(page);
 });
 
+app.get('/confirm/error', (req, res) => {
+  const email = req.query.email;
+  const errorMsg = req.query.msg;
+
+  const page = viewUtils.load('confirm/error', 'main', { ...layoutVars, title: 'Confirmation Error', email, errorMsg });
+  res.send(page);
+});
+
 app.listen(config.port, () => console.log(`Listening on port ${config.port}...`));
 
