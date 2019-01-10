@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path';
 import config from './config';
 import viewUtils from './lib/view-utils';
+import genUtils from './lib/gen-utils';
 
 const app = express();
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
@@ -17,7 +18,11 @@ app.get('/', (req, res) => {
 });
 
 app.get('/confirm/success', (req, res) => {
-  const page = viewUtils.load('confirm/success', 'main', { ...layoutVars, title: 'Confirmation Success' });
+  const email = req.query.email;
+
+  const loginUrl = `${req.query.login_url}${genUtils.makeQueryString({ email })}`;
+
+  const page = viewUtils.load('confirm/success', 'main', { ...layoutVars, title: 'Confirmation Success', loginUrl });
   res.send(page);
 });
 
